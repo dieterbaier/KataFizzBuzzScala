@@ -6,7 +6,10 @@ import java.io.OutputStream
 import java.io.ByteArrayOutputStream
 import java.util.regex.Pattern
 import scala.util.matching.Regex
+import org.junit.runner.RunWith
+import org.scalatest.junit.JUnitRunner
 
+@RunWith(classOf[JUnitRunner])
 class FizzBuzzTest extends FlatSpec {
 
   behavior of "Printed Numbers from 1 to 100"
@@ -35,7 +38,7 @@ class FizzBuzzTest extends FlatSpec {
     assert(convert(15) === "FizzBuzz")
   }
 
-  "A number not devisable by 3 and 5" must " must only be converted to its string representation" in {
+  "A number not devisable by 3 and 5" must " only be converted to its string representation" in {
     assert(convert(4) === "4")
   }
 
